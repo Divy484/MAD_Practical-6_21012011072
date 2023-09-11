@@ -17,6 +17,7 @@ class MyService : Service() {
     lateinit var player : MediaPlayer
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+
         if (!this::player.isInitialized) {
             player = MediaPlayer.create(this,R.raw.song)
         }
